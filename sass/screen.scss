@@ -1,0 +1,448 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+
+// Variables
+
+$montserrat: 'Montserrat', sans-serif;
+$sourcesans: 'Source Sans Pro', sans-serif;
+
+$navyblue: #333333;
+//393735 alt color
+//#333333 alt color
+
+
+// Mixins
+
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+
+// General Styles
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+	font-family: $montserrat; 
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin-bottom: 1em;
+}
+
+h1 { font-size: 1.7em; }
+h2 { font-size: 1.4em; }
+h3 { font-size: 1.2em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.9em; }
+h6 { font-size: 0.8em; }
+
+p, a { font-family: $sourcesans; font-weight: 300; }
+
+p { 
+	margin-bottom: 1em; 
+	line-height: 2em;
+	letter-spacing: 1px;
+}
+
+a { 
+	color: white; 
+	text-decoration: none;
+
+	&:visited, &:active, &:hover {
+		color: white;
+	}
+}
+
+.button {
+	padding: 1em 2em;
+	border: 1px solid white;
+	margin: 0.2em;
+	font-weight: 400;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	background: $navyblue;
+
+	&:hover {
+		background: lighten($navyblue,10%);
+		color: white;
+		cursor: pointer;
+		@include transition(background, 0.3s, ease-in-out);
+	}
+}
+
+
+// Structure
+
+body {
+	background: #202020;
+	margin: 0 auto;
+	color: white;
+}
+
+.wide {
+	width: 100%;
+}
+
+.inner {
+	margin: 0 auto;
+	max-width: 1600px;
+}
+
+
+// Header
+
+header {
+	height: 100%;
+
+	&.project {
+		height: 50%;
+	}
+
+	.inner {
+		height: 100%;
+		background: $navyblue;
+	}
+}
+
+
+// Intro Text
+
+.introtext {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	top: 40%;
+	text-align: center;
+	clear: both;
+
+	h1 {
+		margin-bottom: 0.2em;
+	}
+
+	.introbuttons {
+		margin: 2em 0 0 0; 
+	}
+}
+
+.tagline {
+	font-size: 0.8em;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+	margin-bottom: 3em;
+}
+
+
+// About
+
+.about {
+	text-align: center;
+
+	.inner {
+		background: darken($navyblue,3%);
+		width: 100%;
+		padding: 5em 0;
+	}
+
+	p {
+		margin: 0 auto;
+		max-width: 80%;
+
+		@media screen and (min-width: 768px) {
+			max-width: 700px;
+		}
+		@media screen and (min-width: 900px) {
+			max-width: 800px;
+		}
+	}
+}
+
+
+// Grid
+
+.grid {
+	overflow: hidden;
+	position: relative;
+}
+
+.griditem {
+	float: left;
+	height: 240px;
+	width: 100%;
+	text-align: center;
+	line-height: 240px;
+
+	@media screen and (min-width: 768px) {
+		width: 50%;
+	}
+
+	&:hover {
+		background: darken ($navyblue, 10%);
+	}
+
+	.button {
+		margin: 0 auto;
+		vertical-align: middle;
+
+		&:hover {
+			background: lighten($navyblue, 10%);
+			@include transition(background, 0.3s, ease-in-out);
+			color: white;
+		}
+	}
+
+	&.sot 		{ background: url(../img/sot.png) center center no-repeat; }
+	&.ct 		{ background: url(../img/ct.png) center center no-repeat; }
+	&.aia 		{ background: url(../img/aia.png) center center no-repeat; }
+	&.edf 		{ background: url(../img/edf.png) center center no-repeat; }
+	&.linets	{ background: url(../img/linets.png) center center no-repeat; }
+	&.ar 		{ background: url(../img/ar.png) center center no-repeat; }
+	&.thp 		{ background: url(../img/thp.png) center center no-repeat; }
+	&.rp 		{ background: url(../img/rp.png) center center no-repeat; }
+}
+
+
+// Project Nav
+
+nav {
+	height: 4em;
+	text-align: center;
+	margin: 0 auto;
+
+	@media screen and (min-width: 768px) {
+		height: 5em;
+	}
+
+	.inner, ul {
+		overflow: hidden;
+	}
+
+	ul {
+		width: 12em;
+		margin: 0 auto;
+
+		@media screen and (min-width: 768px) {
+			width: 15em;
+		}
+
+		li {
+			display: inline-block;
+			width: 4em;
+			float: left;
+
+			@media screen and (min-width: 768px) {
+				width: 5em;
+			}
+
+			a {
+				text-indent: -9999px;
+				display: block;
+				padding: 5% 0;
+				height: 4em;
+				border-right: 1px solid #363636;
+
+				&:hover {
+					@include transition(background-color, 0.3s, ease-in-out);
+				}
+
+				&.prev {
+					background: url(../img/arrow_left.svg) center center no-repeat;
+					background-size: 30%;
+
+					&:hover {
+						background: lighten($navyblue, 5%) url(../img/arrow_left.svg) center center no-repeat;
+						background-size: 30%;
+					}
+				}
+				&.next {
+					background: url(../img/arrow_right.svg) center center no-repeat;
+					background-size: 30%;
+
+					&:hover {
+						background: lighten($navyblue, 5%) url(../img/arrow_right.svg) center center no-repeat;
+						background-size: 30%;
+					}
+				}
+				&.grid {
+					background: url(../img/grid.svg) center center no-repeat;
+					background-size: 30%;
+
+					&:hover {
+						background: lighten($navyblue, 5%) url(../img/grid.svg) center center no-repeat;
+						background-size: 30%;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Content
+
+.content {
+	position: relative;
+	text-align: center;
+	margin: 6em 0;
+
+	img {
+		margin: 0 0 4em 0;
+		width: 90%;
+
+		@media screen and (min-width: 768px) {
+			max-width: 1200px;
+		}
+	}
+}
+
+
+// Footer
+
+footer {
+
+	.inner {
+		background: darken($navyblue, 5%);
+	}
+
+	.social {
+		overflow: hidden;
+		margin: 0 auto;
+		width: 100%;
+
+		@media screen and (min-width: 768px) {
+			width: 80%;
+		}
+		@media screen and (min-width: 1024px) {
+			width: 65%;
+		}
+	}
+
+	a {
+		width: 12.2%;
+		padding: 5% 0;
+		text-indent: -9999px;
+		float: left;
+		background: $navyblue;
+		border-right: 1px solid #363636;
+
+		@media screen and (min-width: 768px) {
+			width: 10.7%;
+			padding: 4% 0;
+		}
+
+		@media screen and (min-width: 1024px) {
+			padding: 4.5% 0;
+		}
+
+		&:hover {
+			@include transition(background-color, 0.3s, ease-in-out);
+		}
+		
+		&.email { 
+			background: url(../img/email.svg) center center no-repeat; 
+			background-size: 35%; 
+			border-left: 1px solid #363636;
+
+			&:hover {
+				background: #aad450 url(../img/email.svg) center center no-repeat;
+				background-size: 35%; 
+			}
+		}
+		&.twitter { 
+			background: url(../img/twitter.svg) center center no-repeat; 
+			background-size: 35%; 
+
+			&:hover {
+				background: #00aced url(../img/twitter.svg) center center no-repeat;
+				background-size: 35%; 
+			}
+		}
+		&.instagram { 
+			background: url(../img/instagram.svg) center center no-repeat; 
+			background-size: 30%; 
+
+			&:hover {
+				background: #517fa4 url(../img/instagram.svg) center center no-repeat;
+				background-size: 30%; 
+			}
+		}
+		&.pinterest { 
+			background: url(../img/pinterest.svg) center center no-repeat; 
+			background-size: 30%;
+
+			&:hover {
+				background: #cb2027 url(../img/pinterest.svg) center center no-repeat;
+				background-size: 30%; 
+			}
+		}
+		&.dribbble { 
+			background: url(../img/dribbble.svg) center center no-repeat; 
+			background-size: 30%; 
+
+			&:hover {
+				background: #C73B6F url(../img/dribbble.svg) center center no-repeat;
+				background-size: 30%; 
+			}
+		}
+		&.flickr { 
+			background: url(../img/flickr.svg) center center no-repeat; 
+			background-size: 40%; 
+
+			&:hover {
+				background: #0063DC url(../img/flickr.svg) center center no-repeat;
+				background-size: 40%; 
+			}
+		}
+		&.tumblr { 
+			background: url(../img/tumblr.svg) center center no-repeat; 
+			background-size: 30%;
+
+			&:hover {
+				background: #32506d url(../img/tumblr.svg) center center no-repeat;
+				background-size: 30%;
+			}
+		}
+
+		&.btt {
+			background: url(../img/btt.svg) center 45% no-repeat;
+			background-size: 35%;
+			margin-top: 0.2em;
+
+			@media screen and (min-width: 768px) {
+				width: 16%;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-size: 0.8em;
+				text-indent: 0;
+				float: left;
+				padding-left: 3%;
+				padding-right: 3%;
+				background: url(../img/btt.svg) 85% 50% no-repeat;
+				background-size: 12%;
+			}
+		}
+	}
+
+	.copyright {
+		background: darken($navyblue, 10%);
+		padding: 1.8em 0 1em;
+
+		p {
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			font-size: 0.7em;
+		}
+	}
+}

@@ -1,7 +1,96 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Daisy Swain | Web Design Portfolio</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- SASS -->
+    <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+        <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!-- Smooth Scroll -->
+    <script src="script.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+
+  </head>
+  <body>
+
+     <header class="wide">
+      <div class="inner">
+        <div class="introtext">
+          <h1>Daisy Swain</h1>
+          <p class="tagline">Web Designer</p>
+          <div class="introbuttons">
+            <a data-scroll href="#about" class="button" title="About">About</a>
+            <a data-scroll href="#grid" class="button" title="Portfolio">Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+     <div class="about wide" id="about">
+      <div class="inner">
+        <h2>About</h2>
+        <p>Daisy is a web designer living and working in Glasgow, Scotland.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid wide" id="grid">
+      <div class="inner">
+        <div class="griditem sot left">
+          <a class="button" href="scotlandontap.html" title="Scotland on Tap">Scotland on Tap</a>
+        </div>
+        <div class="griditem ct right">
+          <a class="button" href="chilterntraining.html" title="Chiltern Training">Chiltern Traning</a>
+        </div>
+        <div class="griditem aia left">
+          <a class="button" href="aberdeenairport.html" title="Aberdeen Airport">Aberdeen Airport</a>
+        </div>
+        <div class="griditem edf right">
+          <a class="button" href="edf.html" title="EDF">EDF</a>
+        </div>
+        <div class="griditem linets left">
+          <a class="button" href="linets.html" title="Linets">Linets</a>
+        </div>
+        <div class="griditem ar right">
+          <a class="button" href="assemblyrooms.html" title="Assembly Rooms">Assembly Rooms</a>
+        </div>
+        <div class="griditem thp left">
+          <a class="button" href="tenhillplace.html" title="Ten Hill Place">Ten Hill Place</a>
+        </div>
+        <div class="griditem rp right">
+          <a class="button" href="rhinopinch.html" title="RhinoPinch">RhinoPinch</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="wide" id="footer">
+      <div class="inner">
+        <ul class="social">
+          <li><a class="email" href="mailto:hello@daisyswain.co.uk" target="_blank" title="Email">Email</a></li>
+          <li><a class="twitter" href="http://www.twitter.com/daisy_swain" target="_blank" title="Twitter">Twitter</a></li>
+          <li><a class="instagram" href="http://www.instagram.com/commanderswain" target="_blank" title="Instagram">Instagram</a></li>
+          <li><a class="pinterest" href="http://www.pinterest.com/daisyswain85" target="_blank" title="Pinterest">Pinterest</a></li>
+          <li><a class="dribbble" href="http://www.dribbble.com/Daisy_Swain" target="_blank" title="Dribbble">Dribbble</a></li>
+          <li><a class="flickr" href="http://www.flickr.com/photos/daisyswain" target="_blank" title="Flickr">Flickr</a></li>
+          <li><a class="tumblr" href="http://dswainphoto.tumblr.com/" target="_blank" title="Tumblr">Tumblr</a></li>
+          <li><a class="btt" href="#top" title="Back to Top">Back to Top</a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </body>
+
+  <script>
+    smoothScroll.init();
+  </script>
+  
 </html>
