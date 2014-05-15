@@ -74,6 +74,7 @@ a {
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	background: $navyblue;
+	display: inline-block;
 
 	&:hover {
 		background: lighten($navyblue,10%);
@@ -195,6 +196,7 @@ header {
 	.button {
 		margin: 0 auto;
 		vertical-align: middle;
+		display: inline;
 
 		&:hover {
 			background: lighten($navyblue, 10%);
@@ -329,7 +331,7 @@ footer {
 	}
 
 	a {
-		width: 12.2%;
+		width: 12.15%;
 		padding: 5% 0;
 		text-indent: -9999px;
 		float: left;
