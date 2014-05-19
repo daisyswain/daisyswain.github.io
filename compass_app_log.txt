@@ -8,3 +8,6 @@
 2014-05-19 20:43:03 overwrite stylesheets/screen.css 
 2014-05-19 20:43:31 identical stylesheets/screen.css 
 2014-05-19 20:44:00 overwrite stylesheets/screen.css 
+2014-05-19 22:06:32     error sass/screen.scss (Line 322: Invalid CSS after "	img {": expected "}", was "<<<<<<< HEAD")
+2014-05-19 22:06:32 overwrite stylesheets/screen.css 
+2014-05-19 22:11:16 overwrite stylesheets/screen.css 
