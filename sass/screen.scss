@@ -119,6 +119,25 @@ header {
 		height: 100%;
 		background: $navyblue;
 	}
+
+	.homebutton {
+		position: absolute;
+		left: 2em;
+		top: 2em;
+		width: 2.3em;
+		height: 2.3em;
+		border: 1px solid white;
+		background: url(../img/home.svg) center center no-repeat;
+		background-size: 1.3em;
+		text-indent: -999px;
+
+		&:hover {
+			background: url(../img/home.svg) center center no-repeat lighten($navyblue, 10%);
+			background-size: 20px;
+			@include transition(background, 0.3s, ease-in-out);
+			color: white;
+		}
+	}
 }
 
 
