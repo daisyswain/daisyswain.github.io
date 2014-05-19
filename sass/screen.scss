@@ -108,7 +108,11 @@ header {
 	height: 100%;
 
 	&.project {
-		height: 50%;
+		height: 70%;
+
+		@media screen and (min-width: 768px) {
+			height: 50%;
+		}
 	}
 
 	.inner {
@@ -297,7 +301,7 @@ nav {
 	margin: 6em 0;
 
 	img {
-		margin: 0 0 3em 0;
+		margin: 0 0 5% 0;
 		width: 90%;
 
 		&:last-of-type {
@@ -306,7 +310,6 @@ nav {
 
 		@media screen and (min-width: 768px) {
 			max-width: 1200px;
-			margin: 0 0 4em 0;
 		}
 	}
 }
