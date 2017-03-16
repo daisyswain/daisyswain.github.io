@@ -11,6 +11,16 @@ $beige: #e3d7b0;
 $lightgrey: #827676;
 $blue: #01b2bb;
 
+// Mixins
+
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
 
 // General Styles
 
@@ -58,8 +68,6 @@ a, a:visited, a:active {
 
 	&:hover {
 		cursor: pointer;
-		background-color: $blue;
-		background-size: 80%;
-		color: white;
+		color: lighten($blue,10%)
 	}
 }
